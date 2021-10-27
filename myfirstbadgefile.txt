@@ -1,0 +1,31 @@
+@ECHO OFF
+ECHO Hello %username%
+
+:Q1
+
+SET /p choice1=Type t for time, date for d, or x for exit:
+IF %choice1%==t ( GOTO TIME ) ELSE IF %choice1%==d ( GOTO DATE ) ELSE IF %choice1%==x ( GOTO EXIT ) ELSE ( GOTO ERROR1 )
+
+:ERROR1
+ECHO You can only type t, d or x. Try again!!
+PAUSE
+CLS
+GOTO Q1
+
+:TIME
+ECHO The time is %time%
+PAUSE
+CLS
+GOTO Q1
+
+:DATE
+ECHO The date is %date%
+PAUSE
+CLS
+GOTO Q1
+
+:EXIT
+ECHO Thank you and goodbye!
+PAUSE
+EXIT
+
